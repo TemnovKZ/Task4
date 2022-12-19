@@ -45,3 +45,18 @@ counters.forEach(counter => {
     updateCount ();
     
 });
+
+
+const swiper = new Swiper('.person__slider', {
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.pa-right',
+      prevEl: '.pa-left',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });

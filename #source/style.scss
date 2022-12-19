@@ -432,34 +432,65 @@ main {
 /*--------------------------------PERSON--------------------------------*/
 
 .person {
-    padding: 100px 30px 140px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    position: relative;
+
+    &__slider {
+        padding: 100px 0px 130px;
+        overflow: hidden;
+        position: relative;
+    }
 
     &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__text {
         max-width: 640px;
+        width: 100%;
     }
 
     &__subtitle {
-        max-width: 586px;
-        margin-top: 30px;
-        margin-bottom: 40px;
+        margin: 30px 0px 40px;
     }
-    
-    &__choice {
-        max-width: 465px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
+
+    &__image {
+        position: relative;
+        max-width: 500px;
+        max-height: 500px;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #F3FBF8;
+        transition: 2s;
+    }
+
+    &__img-pers {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__image:hover {
+        background-color: #09A66D;
+    }
+
+    &__img-list {
+        max-width: 220px;
+        position: absolute;
+        left: 15%;
+        bottom: 25px;
+        background: #FFFFFF;
+        box-shadow: -15px 15px 25px rgba(0, 96, 60, 0.04);
+        border-radius: 12px;
     }
 
     &__select {
         display: flex;
         gap: 26px;
+        position: absolute;
+        bottom: 130px;
+        left: 300px;
+        z-index: 1;
     }
 
     &__arrow {
@@ -470,8 +501,9 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
-
+    
     &__arrow:hover {
         background-color: #09A66D;
     }
@@ -488,41 +520,6 @@ main {
         width: 32px;
         transform: rotate(180deg);
     }
-
-    &__images {
-        max-width: 500px;
-        position: relative;
-        top: 40px;
-        right: -20px;
-        z-index: 2;
-    }
-
-    &__image-block {
-        max-width: 500px;
-        max-height: 500px;
-        border-radius: 50%;
-        background-color: #F3FBF8;
-        transition: 2s;
-    }
-  
-    &__image-block:hover {
-        background-color: #09A66D;
-    }
-
-    &__hero {
-        max-width: 100%;
-    }
-
-    &__list {
-        max-width: 220px;
-        position: absolute;
-        left: 15%;
-        bottom: 25px;
-        background: #FFFFFF;
-        box-shadow: -15px 15px 25px rgba(0, 96, 60, 0.04);
-        border-radius: 12px;
-    }
-
 }
 
 /*-------------------------------APP---------------------------------*/
